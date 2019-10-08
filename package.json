@@ -2,7 +2,7 @@
   "name": "learnitlogie",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hireloganw.github.io/hireloganw.github.io",
+  "homepage": "https://hireloganw.github.io/learnitLogie",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.10.2",

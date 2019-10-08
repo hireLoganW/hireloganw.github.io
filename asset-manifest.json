@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/learnitLogie/static/css/main.991f5cde.chunk.css",
-    "main.js": "/learnitLogie/static/js/main.78268c8b.chunk.js",
-    "main.js.map": "/learnitLogie/static/js/main.78268c8b.chunk.js.map",
-    "runtime-main.js": "/learnitLogie/static/js/runtime-main.8fcea14c.js",
-    "runtime-main.js.map": "/learnitLogie/static/js/runtime-main.8fcea14c.js.map",
-    "static/js/2.29d05229.chunk.js": "/learnitLogie/static/js/2.29d05229.chunk.js",
-    "static/js/2.29d05229.chunk.js.map": "/learnitLogie/static/js/2.29d05229.chunk.js.map",
-    "index.html": "/learnitLogie/index.html",
-    "precache-manifest.abce3df33b187646e8b95a116b530aa6.js": "/learnitLogie/precache-manifest.abce3df33b187646e8b95a116b530aa6.js",
-    "service-worker.js": "/learnitLogie/service-worker.js",
-    "static/css/main.991f5cde.chunk.css.map": "/learnitLogie/static/css/main.991f5cde.chunk.css.map",
-    "static/media/logo.svg": "/learnitLogie/static/media/logo.25bf045c.svg"
+    "main.css": "/hireloganw.github.io/static/css/main.991f5cde.chunk.css",
+    "main.js": "/hireloganw.github.io/static/js/main.e4b257ed.chunk.js",
+    "main.js.map": "/hireloganw.github.io/static/js/main.e4b257ed.chunk.js.map",
+    "runtime-main.js": "/hireloganw.github.io/static/js/runtime-main.434c8d7a.js",
+    "runtime-main.js.map": "/hireloganw.github.io/static/js/runtime-main.434c8d7a.js.map",
+    "static/js/2.29d05229.chunk.js": "/hireloganw.github.io/static/js/2.29d05229.chunk.js",
+    "static/js/2.29d05229.chunk.js.map": "/hireloganw.github.io/static/js/2.29d05229.chunk.js.map",
+    "index.html": "/hireloganw.github.io/index.html",
+    "precache-manifest.23b8518d47ab38320fe1a3c7a8ed8201.js": "/hireloganw.github.io/precache-manifest.23b8518d47ab38320fe1a3c7a8ed8201.js",
+    "service-worker.js": "/hireloganw.github.io/service-worker.js",
+    "static/css/main.991f5cde.chunk.css.map": "/hireloganw.github.io/static/css/main.991f5cde.chunk.css.map",
+    "static/media/logo.svg": "/hireloganw.github.io/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8fcea14c.js",
+    "static/js/runtime-main.434c8d7a.js",
     "static/js/2.29d05229.chunk.js",
     "static/css/main.991f5cde.chunk.css",
-    "static/js/main.78268c8b.chunk.js"
+    "static/js/main.e4b257ed.chunk.js"
   ]
 }

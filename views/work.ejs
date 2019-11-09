@@ -1,0 +1,12 @@
+<h1>hi <%= name %></h1>
+
+okk
+
+<ul style="border: 3px solid blue;height: 68vh;display: flex;justify-content: space-around;box-sizing: border-box;width: 100%;margin: auto;">
+    <% for(var project of projects)  { %>
+      <div style="padding: 5px 7px 5px 7px;box-sizing: border-box;width: 50%;">
+    <img style="width: 100%;" src="<%= project.image %>" alt="">
+    <li style="list-style: none;"><%= project.title %></li>
+      </div>
+    <% } %>
+  </ul>

@@ -1,0 +1,28 @@
+<div class="entireContainer" style="width: 67vw;height:auto;margin: auto;position: absolute;left:50%;transform: translate3d(-50%,32%,0);font-size: 2rem;">
+  
+    <h1>hi <%= namez %></h1>
+    <div class="formContainer" style="width: 100%;height: auto;margin: auto;padding: 10px 12px 10px 12px;">
+    
+    <form action="/register" method="POST" style="text-align: left;">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+    
+      <div >
+        <label for="email">email</label>
+        <input type="text" id="email" email="email" required>
+      </div>
+    
+      <div>
+        <label for="password">password</label>
+        <input type="text" id="password" password="password" required>
+      </div>
+      <button type="submit"><%= namez %></button>
+    </form>
+    
+    </div> <!-- /formContainer -->
+    
+    <a href="/login ">login</a >
+    
+    </div> <!-- /entireContainer -->

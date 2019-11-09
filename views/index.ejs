@@ -1,0 +1,1247 @@
+<html lang="en" class=""><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>UItest</title>
+
+ <!-- <link rel="stylesheet" href=""> -->
+ <!-- <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet"> -->
+ 
+ <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.1.1/randomColor.min.js"></script>
+
+<style>
+* {box-sizing: border-box;}
+
+
+
+@font-face {
+font-family: 'DM Serif Text Regular';
+font-style: normal;
+font-weight: normal;
+src: local('DM Serif Text Regular'), url('./public/DMSerifText-Regular.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'DM Serif Text Italic';
+font-style: normal;
+font-weight: normal;
+src: local('DM Serif Text Italic'), url('./public/DMSerifText-Italic.woff') format('woff');
+}
+
+.space {width: 100%;height: 90px;}
+@media screen and (max-width:450px) {
+  .blobCornerFace {max-width: 150px;}
+  .space {width: 100%;height: 120px;}
+}
+
+.nav-tabs {
+    margin-bottom: 15px;
+  }
+  
+  .sign-with {
+    margin-top: 25px;
+    padding: 20px;
+  }
+  
+  div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+  }
+  
+  .api-dev-portal_logo {
+    width: 1em;
+    margin-right: .25em;
+    enable-background: new 0 0 138 160;
+  }
+  
+  .shield, .cog-blue, .cog-green, .cog-orange {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    transition: all 1s, ease-in-out;
+  }
+  
+  .cogs {
+    -webkit-transform: translate(0px, 6px);
+            transform: translate(0px, 6px);
+  }
+  
+  .shield, .cog-blue, .cog-orange, .cog-green {
+    fill: #fff;
+  }
+  
+  .api-dev-portal_logo:hover .shield {
+    fill: #ff5427;
+  }
+  
+  .api-dev-portal_logo:hover .cog-blue {
+    fill: #37c5f7;
+    -webkit-animation: spin-reverse 7.5s linear infinite;
+            animation: spin-reverse 7.5s linear infinite;
+    -webkit-animation-delay: 1.25s;
+            animation-delay: 1.25s;
+  }
+  
+  .api-dev-portal_logo:hover .cog-orange {
+    fill: #ff5427;
+    -webkit-animation: spin-reverse 7.5s linear infinite;
+            animation: spin-reverse 7.5s linear infinite;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  
+  .api-dev-portal_logo:hover .cog-green {
+    fill: #1cd164;
+    -webkit-animation: spin 10s linear infinite;
+            animation: spin 10s linear infinite;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes spin-reverse {
+    100% {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+    }
+  }
+  
+  
+  .uix-text {
+    text-transform: uppercase;
+  }
+  
+  .uix-nav-btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .uix-open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .uix-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out .4s; 
+    z-index: 9999;
+  }
+  .uix-nav.visible {
+    transform: translateX(0);
+  }
+  
+  .uix-nav-black {
+    background-color: rgb(0, 1, 63);
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+  }
+  
+  .uix-nav-black.visible {
+    transition-delay: 0s;
+  }
+  
+  .uix-nav-grn {
+    background-color: #0f9;
+    transition-delay: .2s; 
+    width: 95%;
+  }
+  
+  .uix-nav-grn.visible {
+    transition-delay: .2s;
+  }
+  
+  .uix-nav-white {
+    background-color: #fff;
+    padding: 40px;
+    transition-delay: 0s; 
+    width: 95%;
+  }
+  
+  .uix-nav-white.visible {
+    transition-delay: .4s;
+  }
+  
+  .uix-nav-container {
+    position: relative;
+  }
+  
+  .uix-close-btn {
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  
+  .uix-logo {
+    width: 150px;
+  }
+  
+  .uix-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .uix-list li {
+    margin: 20px 0;
+  }
+  
+  .uix-list li a {
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .uix-list ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  
+  .social-panel-container {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .social-panel-container.visible {
+    transform: translateX(-10px);
+  }
+  
+  .social-panel {	
+    border-radius: 16px;
+    box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+    border: 5px solid #001F61;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Muli';
+    position: relative;
+    height: 169px;	
+    width: 370px;
+    max-width: calc(100% - 10px);
+  }
+  
+  .social-panel button.close-btn {
+    border: 0;
+    color: #97A5CE;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .social-panel button.close-btn:focus {
+    outline: none;
+  }
+  
+  .social-panel p {
+    background-color: #001F61;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2px 17px 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 235px;
+  }
+  
+  .social-panel p i {
+    margin: 0 5px;
+  }
+  
+  .social-panel p a {
+    color: #FF7500;
+    text-decoration: none;
+  }
+  
+  .social-panel h4 {
+    margin: 20px 0;
+    color: #97A5CE;	
+    font-family: 'Muli';	
+    font-size: 14px;	
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  
+  .social-panel ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-panel ul li {
+    margin: 0 10px;
+  }
+  
+  .social-panel ul li a {
+    border: 1px solid #DCE1F2;
+    border-radius: 50%;
+    color: #001F61;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+  }
+  
+  .social-panel ul li a:hover {
+    border-color: #FF6A00;
+    box-shadow: 0 9px 12px -9px #FF6A00;
+  }
+  
+  .floating-btn {
+    border-radius: 26.5px;
+    background-color: #001F61;
+    border: 1px solid #001F61;
+    box-shadow: 0 16px 22px -17px #03153B;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .floating-btn:hover {
+    background-color: #ffffff;
+    color: #001F61;
+  }
+  
+  .floating-btn:focus {
+    outline: none;
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+    .social-panel-container.visible {
+      transform: translateX(0px);
+    }
+    
+    .floating-btn {
+      right: 10px;
+    }
+  }
+  
+ .listProj { list-style: none;margin-left: 1em;}
+ /* .proj-image:nth-child(odd){
+  width: 100%;
+   height: auto;
+   max-width: 200px;
+   max-height:200px;
+   position: relative;
+   left:50%;
+   transform: translate3d(-50%,0px,0px);
+ } */
+ .proj-image {
+   width: 100%;
+   height: auto;
+   max-width: 200px;
+   max-height:200px;
+   position: relative;
+   left:50%;
+   transform: translate3d(-50%,0px,0px);
+ }
+ .heroContent {
+   line-height: 1.1;
+   max-height: 200px;
+   overflow: scroll;
+ }
+ .projectCard:hover {transform: scale(1.032);transition: all ease 1s;}
+
+.readMore {display: none;transition: all 0.2s ease-in;position: absolute;z-index: 9999;padding-bottom: 20px;}
+.showOrHide {display: block;}
+
+.projectOuterContainer {
+border: 3px solid transparent;
+height: 32rem;
+display: flex;
+justify-content: space-around;
+box-sizing: border-box;
+width: 100%;
+margin: auto;flex-flow: wrap;
+overflow: scroll;
+padding: 10px 0 10px 0;
+}
+.projectCard {
+  padding: 10px 7px 10px 7px;
+  box-sizing: border-box;
+  width: 45%;
+  max-width:250px;
+  height:66.777%;
+  border-radius:0.5em;
+  border:1px solid rgb(0,0,0,0.32);margin:auto;
+}
+
+
+/* Hide scrollbars in Webkit browsers*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dimensions and base styles for the containers and headers */
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.app-wrapper {
+  background-color: #fff;
+  font-family: sans-serif;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.app-bar {
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 2px #c6c6c6;
+  box-sizing: border-box;
+  padding: 15px 70px;
+  position: absolute;
+  width: 100vw;
+  z-index: 3;
+  transition: background-color 500ms, box-shadow 500ms;
+}
+
+
+/* Declarations that hide the header when a contact is selected */
+
+
+.app-headline {
+  color: #5f5f5f;
+  cursor: default;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.app-bar-button {
+  background: none;
+  border: none;
+  color: #b1b1b1;
+  height: 30px;
+  outline: none;
+  padding: 2px 0 3px;
+  text-shadow: 0 0 transparent;
+  transition: color 500ms, text-shadow 500ms;
+  width: 30px;
+}
+
+.app-bar-button:hover {
+  color: #c1c1c1;
+}
+
+.app-bar-button:active {
+  color: #919191;
+}
+
+#menuToggle .fa {
+  font-size: 2.25em;
+}
+
+#sortToggle .fa {
+  font-size: 1.75em;
+}
+
+.menu-toggle {
+  left: 13px;
+  position: absolute;
+  top: calc(50% - 13px);
+}
+
+.sort-toggle {
+  position: absolute;
+  right: 13px;
+  top: calc(50% - 13px);
+}
+
+.app-body {
+  background-image: linear-gradient(transparent, transparent);
+  background-position: 0 -300px;
+  background-repeat: no-repeat;
+  background-size: 100% 238px;
+  height: 450px;
+  -ms-overflow-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 62px 0 0;
+  transition: background-position 500ms;
+}
+
+.app-body::-webkit-scrollbar {
+	display: none;
+}
+
+.contact-list {
+	display: block;
+  padding: 2px;
+  transition: all 2s;
+}
+
+.contact-list tbody {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* END Dimensions and base styles for the containers and headers */
+
+/* Declarations for when the header is set to be hidden */
+.hide-contacts .app-bar {
+  background-color: transparent;
+  box-shadow: 0 0 0 transparent;
+}
+
+.hide-contacts #menuToggle {
+  cursor: pointer;
+}
+
+.hide-contacts .app-headline {
+  opacity: 0;
+}
+
+.hide-contacts .app-bar-button {
+  color: #fff;
+  text-shadow: 1px 1px #c1c1c1;
+}
+/* END Declarations for when the header is set to be hidden */
+
+
+/* Contact table cell styles */
+.contact {
+	border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  opacity: 1;
+  overflow: hidden;
+ 
+  -webkit-transition-property: opacity, top, -webkit-transform;
+  -webkit-transition-property: opacity, top, transform;
+  -webkit-transition-duration: 500ms;
+  transition-property: opacity, top, transform;
+  transition-duration: 500ms;
+  
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.contact-image div {
+	border-radius: 50%;
+  display: inline-block;
+	height: 35px;
+  margin: 10px 13px;
+  width: 35px;
+  vertical-align: middle;
+}
+
+.contact-name {
+  color: #515151;
+  cursor: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+}
+
+.contact-name .last-name {
+	color: #4d4d4d;
+  font-weight: bold;
+}
+
+.selected-contact {
+	cursor: default;
+  pointer-events: none;
+}
+
+.selected-contact .contact-name {
+  -webkit-transform: scale(1.2) translateX(9px);
+	transform: scale(1.2) translateX(9px);
+}
+
+.hide-contacts .contact:not(.selected-contact) {
+  pointer-events: none;
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+/* END Contact table cell styles */
+
+/* Contact info styles, hidden by default*/
+.contact-info {
+	background-color: #fff;
+  font-size: 18px;
+  min-height: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 233px;
+  -webkit-transform: translateY(275px);
+  transform: translateY(275px);
+  -webkit-transition: -webkit-transform 500ms, opacity 1000ms;
+  -webkit-transition: transform 500ms, opacity 1000ms;
+  transition: transform 500ms, opacity 1000ms;
+  width: 100%;
+  z-index: 1;
+}
+
+.contact-info.visible {
+	opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.contact-info {
+  color: #484848;
+  
+}
+
+.contact-info-item {
+  border-bottom: 1px solid #f5f5f5;
+  display: block;
+}
+
+.contact-info-icon {
+	height: 35px;
+  padding: 10px 13px;
+  width: 35px;
+  text-align: center;
+}
+
+.contact-info-icon i {
+	font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.contact-info-detail {
+  padding-left: 5px;
+}
+/* END Contact info styles */
+
+.displayNone {
+  display: none;
+  transition: all 1s ease-in-out;
+}
+.app-bodyIO{
+  height: 10px;
+  background-color: rgba;
+  opacity: 0.32;
+}
+
+.loading {
+  text-transform: uppercase;
+  /* font-family: "Cabin Condensed", sans-serif; */
+  font-weight: bold;
+  font-size: 44px;
+  text-align: center;
+  width: 100vw !important;
+  height: 120px;
+  line-height: 40px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  display: block;
+  margin-left: 21% !important;
+  z-index: 999;
+
+  }
+
+.loading-2 {
+  top: -20px;
+  width: 473px;
+  height: 10px;
+  font-size: 0;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 0 auto;
+}
+
+.ff {
+  position: absolute;
+  font-size: 12pt;
+  top: -20px;
+  color: white;
+  line-height: 12pt;
+}
+
+.loading-2-text {
+  /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.freecreatives.com%2Fwp-content%2Fuploads%2F2016%2F03%2FColorful-Geometric-Triangle-Background-Texture.jpg&f=1&nofb=1"); */
+  width: 473px;
+  height: 97px;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 200px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+  100% {
+    background-size: 200px 200px;
+  }
+}
+.wave {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.freecreatives.com%2Fwp-content%2Fuploads%2F2016%2F03%2FColorful-Geometric-Triangle-Background-Texture.jpg&f=1&nofb=1");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px rgba(255, 255, 255, 0.06);
+  animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+  background-size: 200px 100px;
+  background-repeat: repeat-x;
+  opacity: 1;
+
+}
+
+.wave-2 {
+  -moz-background-clip: initial;
+  -o-background-clip: initial;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  display: inline-block;
+}
+#wave {
+  max-width: 100vw;
+  margin: 1.88em 0 0 15%;
+  transform: scale(0.67);
+  /* -moz-text-shadow: 1px 2px 1px yellow;
+  -o-text-shadow: 1px 2px 1px yellow; 
+  -webkit-text-shadow: 1px 2px 1px yellow; */
+  filter: dropshadow(1px 2px 1px red;)
+  }
+
+  @media screen and (max-width:500px) {
+    #wave {
+  margin: 2.9em 0 0 1.5em;
+  }
+  #showHide {
+   transform: scale3d(0.8,0.8,0.8);
+ }
+ .first {
+  margin-left: -0.5em;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+  }
+
+
+#wave:before {
+  content: '';
+  animation: animateWord infinite 12s;
+}
+@keyframes animateWord{
+  0%{
+    content:'React.js'
+  }
+  44%{
+    content: 'Javascript';
+  }
+  50%{
+    content:'Wordpress';
+  }
+
+  64%{
+    content: 'React.js'
+  }
+  75%{
+    content: 'React.js'
+  }
+  88%{
+    content: 'Javascript';
+  }
+  100%{
+    content: 'Love'
+  }
+}
+
+#cursiveFont {
+  font-family: 'Great Vibes', cursive;
+}
+
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid turquoise;
+  border-radius: 0.6em;
+  color: #09f;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.4em 1.2em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+.first {
+  /* margin-left: -0.5em; */
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #04f inset;
+}
+.second {
+  border-radius: 3em;
+  border-color: black;
+  color: white;
+  background-image: linear-gradient(to right, #777, #777 5%, #222 5%, #222 10%, #777 10%, #777 15%, #222 15%, #222 20%, #777 20%, #777 25%, #222 25%, #222 30%, #777 30%, #777 35%, #222 35%, #222 40%, #777 40%, #777 45%, #222 45%, #222 50%, #777 50%, #777 55%, #222 55%, #222 60%, #777 60%, #777 65%, #222 65%, #222 70%, #777 70%, #777 75%, #222 75%, #222 80%, #777 80%, #777 85%, #222 85%, #222 90%, #777 90%, #777 95%, #222 95%, #222 100%);
+  background-position: 0 0;
+  background-size: 100%;
+  transition: background 1700ms ease-in-out;
+}
+.second:hover {
+  background-position: 100px;
+}
+ #showHide {
+   margin: 1.5em 0 0 1.75em;
+   padding: 5px 7px 5px 7px;
+ }
+ .contact-name { color:black;}
+ span.first-name:nth-child(2){
+   color:blue ;
+ }
+ .first-name:nth-child(3) {
+   color:red;
+
+ }
+ </style>
+  </head>
+<body>
+    <header id="navbar" role="banner" class="navbar">
+        <button class="loganx-nav-btn uix-open-btn btn second">
+       <i style='transform: scale(1.75);padding: 5px 7px 5px 7px;' class="fas fa-bars"></i>
+     </button>
+     
+     
+     
+     <div class="uix-nav uix-nav-black">
+       <div class="uix-nav uix-nav-grn">
+         <div class="uix-nav uix-nav-white">
+           <div class="uix-nav-container">
+             <button class="uix-nav-btn uix-close-btn"><i class="fas fa-times"></i></button>
+             <img class="uix-logo" src="https://dl3.pushbulletusercontent.com/IYTBjNAIDrX0fkzJndnHlYQPiWn0HWeH/loganlognetfl3.png" alt="uix Logo" />
+             <ul class="uix-list">
+               <li><a href="#">Teams</a></li>
+               <li><a href="#">Locations</a></li>
+               <li><a href="#">Life at uix</a></li>
+               <li>
+                 <ul>
+                   <li><a href="#">uix culture memo</a></li>
+                   <li><a href="#">Work life philosophy</a></li>
+                   <li><a href="#">Inclusion & Diversity</a></li>
+                   <li><a href="#">Weareuix</a></li>
+                   <li><a href="#">Blog</a></li>
+                 </ul>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+     
+     <img class='blobCornerFace' src="https://dl3.pushbulletusercontent.com/Md6WRUbRxFhS5IYnaKmANHUcw4Jg1uG0/blobcornerface.jpg" alt="blob"  style="position: absolute;top: 0;right: 0;max-height: 32vh;z-index: -1;" />
+    
+  <div class="space" ></div>
+<!-- 
+  /*
+    HERO
+*/
+ -->
+  <!-- ### variables [ name, desc ]  -->
+<div class="heroContent">
+    <h1 id="cursiveFont" style="font-size: 44px;color: #049;text-align: center;margin-left: -0.32em;font-family: 'DM Serif Text Regular'"> <%= name %></h1>
+    <h3 style="font-family: 'DM Serif Text Regular';padding: 0 7px 5px 0;max-width: 300px;text-align: left;margin: -15px auto;"><%= desc %></h3>
+
+<div class="loading wave" id="wave"></div>
+<!-- <script>
+const waveUI = document.querySelector('#wave:after');
+const wordBuzz = ['react', 'UX/UI', 'Javascript']
+let counter = 0;
+let myInterval = setInterval(()=>{counter <= wordBuzz.length ? counter ++ : (counter = counter - counter);console.log(counter)},2000)
+setTimeout(()=>{clearInterval(myInterval)},12000)
+waveUI.style.content = wordBuzz[0];
+
+
+</script> -->
+
+    <button class="btn first" id="showHide" style="font-family: 'DM Serif Text Regular';">read more ..</button>
+    <div class="readMore" id="readMore">
+        <h5>Engineering solutions to make certain areas of your life a little better, focused, and refined. I've been waking up early and staying up late to hit the end goal of expert programmer. My work is not tied to tech trends.. I am a problem solver and entrepreneur. My unique value comes from my ability to handle ambiguity. For example I work to first- understand the needs of the problem rather than jumping to a solution and using whatever cool things in my toolbox or whatever trend I see.
+          </h5>
+              <h5>I am business minded. - cognisant of how my actions, attitude & quality of work can and will affect the big picture of the business.</h5>
+    </div>
+</div>
+
+  <!-- Centered wrapper -->
+  <div class="app-wrapper">
+      <!-- Header for the 'app' -->
+      <header class="app-bar">
+        <button id="menuToggle" class="app-bar-button menu-toggle menu-is-closed"><i id='eyeBall' class="fa fa-eye"></i></button>
+        <h1 id="appHeadline" class="app-headline">My Work</h1>
+        <button id="sortToggle" class="app-bar-button sort-toggle"><i class="fa fa-sort-alpha-asc"></i></button>
+      </header>
+      <!-- END 'app' Header -->
+      
+      <!-- Table of contacts -->
+      <div class="app-body">
+       
+        <!-- List of contacts, these are built dynamicly by javascript on page load -->
+        <table id="contactList" class="contact-list">
+          <tbody>
+          </tbody>
+        </table>
+        <!-- END List of contacts -->
+        
+        <!-- Contact Info (Details), hidden by default, visible when a contact is selected -->
+        <!-- This info is not contact item specific so it is not loaded dynamically -->
+        <style>
+          .sirPlease:before {
+            content:'<%= proj1Info %>'
+          }
+          .sirPlease2:before {
+            content: '<%= name %>'
+          }
+          </style>
+        <table id="contactInfo" class="contact-info">
+          <tbody>
+            <tr id="contactUsername" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-comment-o"></i></td><td class="contact-info-detail sirPlease"></td></tr>
+            <tr id="contactEmail" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-envelope-o"></i></td><td class="contact-info-detail">john.smith@email.com</td></tr>
+            <tr id="contactHomeNumber" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-phone"></i></td><td class="contact-info-detail">(555) 987-1234</td></tr>
+            <tr id="contactWorkNumber" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-building-o"></i></td><td class="contact-info-detail">(555) 987-1234</td></tr>
+            <tr id="contactAddress" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-home"></i></td><td class="contact-info-detail">123 Elm Street</td></tr>
+          </tbody>
+        </table>
+
+        <!-- <table id="contactInfo2" class="contact-info">
+          <tbody>
+            <tr id="contactUsername2" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-comment-o"></i></td><td class="contact-info-detail">joedoe</td></tr>
+            <tr id="contactEmail2" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-envelope-o"></i></td><td class="contact-info-detail">john.smith@email.com</td></tr>
+            <tr id="contactHomeNumber2" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-phone"></i></td><td class="contact-info-detail">(555) 987-1234</td></tr>
+            <tr id="contactWorkNumber2" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-building-o"></i></td><td class="contact-info-detail">(555) 987-1234</td></tr>
+            <tr id="contactAddress2" class="contact-info-item"><td class="contact-info-icon"><i class="fa fa-home"></i></td><td class="contact-info-detail">123 Elm Street</td></tr>
+          </tbody> -->
+        </table>
+        <!-- End Contact Info (Details) -->
+      </div>
+    </div>
+    <!-- ## end contacts -->
+
+
+<div class="projectOuterContainer">
+
+  <!-- ###variables  -->
+    <% for(var project of projects)  { %>
+      <div class="projectCard" id="ystest">
+        <img class="proj-image" src="<%= project.image %>" alt=" project itm">
+    <div style="width: 8.75em;height:100px;margin:auto;padding: 5px 7px 5px 7px;transform: translate3d(-1.44em,20px,0px);">
+      <li class="listProj"><%= project.title %></li> 
+      <!-- <li class="listProj" id="ystest"><%= project.code %></li> -->
+      
+    </div>
+    <br><br>
+    </div>
+    
+    <% } %>
+    
+    </div>
+  
+    <script>let ishiddenContent = document.getElementById('readMore');
+    let showHideBtn = document.getElementById('showHide');
+    showHideBtn.addEventListener('click',()=>{
+      ishiddenContent.classList.toggle('showOrHide');
+      console.log('confirmation it works')
+    })</script>
+
+<script>
+  const eyeBall = document.getElementById('eyeBall');
+  const contactList2 = document.getElementById('contactList');
+  const appBody2 = document.querySelector('.app-body');
+
+
+
+eyeBall.addEventListener('click', ()=>{
+  console.log('yomamma');
+  eyeBall.classList.toggle('fa-eye-slash');
+  contactList2.classList.toggle('displayNone');
+  appBody2.classList.toggle('app-bodyIO')
+})
+let major = document.querySelector('.app-bar');
+let rocco = () => {major.style.borderBottom = 'red'};
+rocco();
+</script>
+  
+  <script>'use strict';
+  const uix_open_btn = document.querySelector('.uix-open-btn');
+  const uix_close_btn = document.querySelector('.uix-close-btn');
+  const uix_nav = document.querySelectorAll('.uix-nav');
+  
+  uix_open_btn.addEventListener('click', () => {
+    uix_nav.forEach(nav_el => { nav_el.classList.add('visible') });
+  });
+  
+  uix_close_btn.addEventListener('click', () => {
+    uix_nav.forEach(nav_el => { nav_el.classList.remove('visible') });
+  });
+ </script>
+      <script>
+        
+      // Utility Function
+      // Takes any collection with a length property that can be
+      // emumerated numerically. Each item has it's own callback
+      function forEach(collection, action, scope) {
+      for (var i = 0; i < collection.length; i++) {
+      action.call(scope, collection[i], i);
+      console.log('scope:' + scope);
+      console.log(collection[2].classList);
+      
+      }
+     
+      }
+      
+      
+      var contactInformation = [{'firstName': 'Feeding', 'lastName': 'Homeless Felines', 'color': '#04f'},
+               { 'firstName': 'project', 'lastName': '2', 'color': '#09f'},
+               { 'firstName': 'project', 'lastName': '3', 'color': 'turquoise'},
+               { 'firstName': 'project', 'lastName': '4', 'color': 'pink'},
+               { 'firstName': 'project', 'lastName': '5', 'color': '#09f'},
+               { 'firstName': 'project', 'lastName': '6', 'color': '#09f'},
+               { 'firstName': 'project', 'lastName': '7', 'color': '#09f'},
+              ];
+      
+      // Adds a contact to the contact list using the data above
+      // Structure
+      // <tbody>
+      //   <tr class="contact">
+      //     ...
+      //   </tr>
+      //
+      //   <tr class="contact">
+      //     <td class="contact-image">
+      //       <div data-image-color="#xxxxxx"></div>
+      //     </td>
+      //     <td class="contact-name">
+      //       <span class="first-name">
+      //       <span class="last-name">
+      //     <td>
+      //   </tr>
+      //
+      //   <tr class="contact">
+      //     ...
+      //   </tr>
+      // </tbody>
+      var contactList = document.querySelector('#contactList tbody');
+      function addContact(contactInfo) {
+      var contact = document.createElement('tr'),
+        contactImgWrapper = document.createElement('td'),
+        contactImg = document.createElement('div'),
+        contactName = document.createElement('td'),
+        firstName = document.createElement('span'),
+        lastName = document.createElement('span');
+      
+      // Add classes to each element in a contact <tr>
+      contact.classList.add('contact');
+      contactName.classList.add('contact-name');
+      firstName.classList.add('first-name');
+      lastName.classList.add('last-name');
+      contactImgWrapper.classList.add('contact-image');
+      
+      // Add the color to the contact-color <td> -> <div>
+      contactImg.style.backgroundColor = contactInfo['color'];
+      contactImg.setAttribute('data-image-color', contactInfo['color']);
+      
+      var count;
+for (count = 0; count <= contactInformation.length; count++) {
+  
+}
+      // Append each element to the contact <tr>
+      // starting with the inner most element
+      firstName.appendChild(document.createTextNode(contactInfo['firstName']));
+      lastName.appendChild(document.createTextNode(contactInfo['lastName']));
+      contactImgWrapper.appendChild(contactImg);
+      contact.appendChild(contactImgWrapper);
+      contactName.appendChild(firstName);
+      contactName.appendChild(document.createTextNode(''));
+      contactName.appendChild(lastName);
+      contact.appendChild(contactName); 
+      
+      // Append the contact to the contact list
+      contactList.appendChild(contact);
+      }
+      
+      // Use the contactInformation collection to build the contact list
+      forEach(contactInformation, function(contactInfo) {
+      addContact(contactInfo);
+      });
+      
+      // Event listener for table cells
+      // Use CSS directly to bring the selected tab into focus
+      // Rely on CSS Transitions for the animation
+      function focusSelectedContact(event) {
+      var currentTarget = event.currentTarget,
+        appBody = document.querySelector('.app-body'),
+        rect = currentTarget.getBoundingClientRect(),
+        appBarRect = appBody.getBoundingClientRect(),
+        translate = appBarRect.top - rect.top + 171,
+        root = document.querySelector('html'),
+        menuToggleIcon = document.querySelector('#menuToggle i'),
+        contactInfo = document.querySelector('.contact-info'),
+        color = currentTarget.querySelector('.contact-image div').getAttribute('data-image-color');
+      
+      
+      // Add the initial styles to the selected contact
+     
+      currentTarget.classList.remove('previously-selected');
+      currentTarget.classList.add('selected-contact');
+
+      // let mj = document.querySelector('.selected-contact');
+      // mj.appendChild(document.createTextNode('oop'));
+      
+      // Hide the contacts that weren't clicked
+      root.classList.add('hide-contacts');
+      root.classList.remove('show-contacts');
+     
+      
+      // Reposition the selected contact table cell
+      currentTarget.style.webkitTransform = 'translateY(' + translate +'px)';
+      currentTarget.style.transform = 'translateY(' + translate +'px)';
+      currentTarget.offsetHeight; // Force a redraw so the animation works
+      
+      // Apply a gradient to the table's background
+      appBody.style.backgroundImage = 'linear-gradient(' + color + ' 0%, #fff 100%)';
+      appBody.style.backgroundPosition = '0 0';
+      appBody.style.overflow = 'hidden';
+      
+      // Change the menu button icons
+      menuToggleIcon.classList.remove('fa-bars');
+      menuToggleIcon.classList.add('fa-arrow-left');
+      contactInfo.classList.add('visible');
+      }
+      
+      // Attach the focusSelectedContact event listener to each table cell
+      forEach(document.querySelectorAll('.contact'), function(contact) {
+      contact.addEventListener('click', focusSelectedContact);
+      });
+      
+      
+      
+      // Event listener for the menu button
+      // Undo all of the css set by focusSelectedContact
+      function showAllContacts() {
+      var appBody = document.querySelector('.app-body'),
+        selectedContact = document.querySelector(".selected-contact"),
+        menuToggleIcon = document.querySelector('#menuToggle i'),
+        contactInfo = document.querySelector('.contact-info');
+      
+      // Slide the selected contact back into its original position
+      selectedContact.style.webkitTransform = '';
+      selectedContact.style.transform = '';
+      selectedContact.offsetHeight; // Force a redraw so the browser doesn't skip the animation
+      
+      // Remove the gradient on the table's background
+      appBody.style.backgroundPosition = '';
+      appBody.style.overflow = 'auto';
+      
+      // Revert the menu button icons
+      menuToggleIcon.classList.add('fa-bars');
+      menuToggleIcon.classList.remove('fa-arrow-left');
+      contactInfo.classList.remove('visible');
+      
+      // After the selected contact is in position (the transition is complete)
+      // display the other contacts again
+      setTimeout(function() {
+      var root = document.querySelector('html');
+      root.classList.add('show-contacts');
+      root.classList.remove('hide-contacts');
+      selectedContact.classList.remove('selected-contact');
+      }, 250);
+      }
+      
+      // Attach the showAllContacts event listener to the menu button
+      document.querySelector('#menuToggle').addEventListener('click', showAllContacts);
+      
+      
+      
+     </script>
+  </body>
+  </html>
